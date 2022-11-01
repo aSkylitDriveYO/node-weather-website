@@ -1,4 +1,4 @@
-// console.log('test client side js');
+console.log('test client side js');
 
 // fetch('https://puzzle.mead.io/puzzle').then((response) => {
 //   response.json().then(({ puzzle }) => {
