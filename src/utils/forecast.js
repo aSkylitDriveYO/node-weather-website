@@ -15,7 +15,11 @@ const forecast = (lat, long, callback) => {
     } else {
       callback(
         undefined,
-        'it is ' + body.data[0].temp + ' degrees outside in'
+        'it is ' +
+          body.data[0].temp +
+          ' degrees outside with ' +
+          body.data[0].rh +
+          ' % humidity'
       );
     }
   });

@@ -19,7 +19,7 @@ weatherForm.addEventListener('submit', (e) => {
   messageTwo.textContent = '';
 
   fetch('/weather?address=' + location).then((response) => {
-    response.json().then(({ error, location, forecast }) => {
+    response.json().then(({ error, location, forecast, address }) => {
       if (error) {
         messageOne.textContent = error;
       } else {
@@ -27,6 +27,8 @@ weatherForm.addEventListener('submit', (e) => {
         messageTwo.textContent = forecast;
         console.log(location);
         console.log(forecast);
+        console.log('response', response);
+        console.log('address', address);
       }
     });
   });
